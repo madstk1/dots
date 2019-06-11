@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="CUTEMENU UwU ~" />
+  <item label="term"><action name="Execute"><command>urxvt</command></action></item>
+  <item label="fire-chan"><action name="Execute"><command>firefox</command></action></item>
+  <item label="OwO what a qt"><action name="Execute"><command>qutebrowser</command></action></item>
+  <item label=""><action></action></item>
+  <item label="shutsi-wutshi ~"><action name="Execute"><command>shutdown now</command></action></item>
+  <item label="beep boop reboot"><action name="Execute"><command>reboot</command></action></item>
+  <item label="schloopy time!"><action name="Execute"><command>zzz</command></action></item>
+  <item label=""><action></action></item>
+  <item label="this shit is fucking aids"><action name="Exit"><prompt>no</prompt></action></item>
+  <item label="GET ME THE FUCK OUTTA HERE"><action name="Exit"><prompt>no</prompt></action></item>
+</menu>
+
+</openbox_menu>

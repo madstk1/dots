@@ -1,0 +1,80 @@
+[general]
+monitor = eDP1
+
+height = 30
+bottom = true
+offset-y = 3%
+
+radius = 15
+
+[fonts]
+font-0 = lucy tewii:pixelsize=11;2
+
+[colors]
+background    = #fffafa
+foreground    = #696e65
+accent        = #c96d66
+
+;
+; ; BARS
+;
+
+; BAR - CLOCK
+
+[bar/clock]
+monitor = ${general.monitor}
+width = 5%;
+height = ${general.height}
+bottom = ${general.bottom}
+offset-x = 93%
+offset-y = ${general.offset-y}
+radius = ${general.radius}
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = ${fonts.font-0}
+modules-center = date
+
+; BAR - BATTERY
+
+[bar/battery]
+monitor = ${general.monitor}
+width = 7%;
+height = ${general.height}
+bottom = ${general.bottom}
+offset-x = 85%
+offset-y = ${general.offset-y}
+radius = ${general.radius}
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = ${fonts.font-0}
+modules-center = battery
+
+;
+; ; MODULES
+;
+
+; DATE
+[module/date]
+type = internal/date
+interval = 1
+
+label = %time%
+time = %H:%M
+
+; BATTERY
+[module/battery]
+type = internal/battery
+battery = BAT0
+interval = 1
+
+adapter = ADP1
+full-at = 98
+time-format = %H:%M
+
+format-charging = 	<label-charging>
+format-discharging = 	<label-discharging>
+
+label-charging = %percentage%% 
+label-discharging = %percentage%% (%time%)

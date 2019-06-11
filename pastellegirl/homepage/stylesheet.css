@@ -1,0 +1,89 @@
+:root {
+    --rotation1: 18%;
+    --rotation2: 3%;
+    --accent: #be66c9;
+    --secondary-accent: #e5c4cd;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+h1.shadow, div.shadow {
+    filter: drop-shadow( 2px 2px 0px var(--accent));
+}
+
+div.shadow::selection, div.shadow::-moz-selection,
+h1.shadow::selection, h1.shadow::-moz-selection {
+    text-shadow: 2px 2px 0px var(--secondary-accent);
+}
+
+div.container {
+    display: flex;
+    flex-direction: row;
+}
+
+a div.image-container {
+    transition: margin 0.1s;
+    transition-timing-function: ease-in-out;
+    margin: 0.5rem;
+    position: relative;
+}
+
+a:hover div.image-container {
+    margin: 0rem;
+    position: relative;
+}
+
+a div.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-color: var(--accent);
+
+    transition: opacity 0.2s;
+}
+
+a:hover div.image-container::after {
+    opacity: 0;
+}
+
+a:nth-of-type(2) div.image-container {
+    margin-left: -1rem;
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+}
+
+a:nth-of-type(1) div.image-container img {
+    clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--rotation1)) 100%, 0% 100%);
+}
+
+a:nth-of-type(2) div.image-container img {
+    clip-path: polygon(var(--rotation1) 0%, 100% 0%, calc(100% - var(--rotation2)) 100%, 0% 100%);
+}
+
+a:nth-of-type(3) div.image-container img {
+    clip-path: polygon(var(--rotation2) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+h1 {
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: black;
+    text-align: center;
+
+}

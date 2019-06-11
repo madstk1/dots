@@ -1,0 +1,15 @@
+!
+! ! GRATITUDE COLORS
+!
+
+#define black    #695e65
+#define red      #c96d66
+#define green    #66c97d
+#define blue     #7f6d94
+#define magenta  #be66c9
+#define cyan     #e5c4cd
+#define yellow   #c9c466
+#define white    #ffffff
+
+#define bg       white
+#define fg       black

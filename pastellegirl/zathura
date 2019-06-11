@@ -1,0 +1,37 @@
+set font "osx Terminus 9"
+set guioptions ""
+set n-completion-items 5
+
+set statusbar-bg "#f8f4ec"
+set statusbar-fg "#391f07"
+
+set default-bg "#f8f4ec"
+set default-fg "#391f07"
+
+set inputbar-bg "#f4f4ec"
+set inputbar-fg "#391f07"
+
+set notification-bg "#f8f4ec"
+set notification-fg "#391f07"
+
+set notification-warning-bg "#c9c466"
+set notification-warning-fg "#391f07"
+
+set notification-error-bg "#b31a00"
+set notification-error-fg "#f8f4ec"
+
+set completion-bg "#f8f4ec"
+set completion-fg "#391f07"
+
+set completion-group-bg "#f8f4ec"
+set completion-group-fg "#391f07"
+
+set completion-highlight-bg "#f8f4ec"
+set completion-highlight-fg "#c96d66"
+
+set recolor-lightcolor "#391f07"
+set recolor-darkcolor "#f8f4ec"
+
+map r recolor
+
+unmap d

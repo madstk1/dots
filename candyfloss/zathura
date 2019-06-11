@@ -1,0 +1,34 @@
+set font "Cherry 9"
+set guioptions ""
+set n-completion-items 5
+
+set statusbar-bg "#fff"
+set statusbar-fg "#333"
+
+set default-bg "#fff"
+set default-fg "#333"
+
+set inputbar-bg "#fff"
+set inputbar-fg "#333"
+
+set notification-bg "#fffafa"
+set notification-fg "#333"
+
+set notification-warning-bg "#c9c466"
+set notification-warning-fg "#333"
+
+set notification-error-bg "#c96d66"
+set notification-error-fg "#333"
+
+set completion-bg "#fff"
+set completion-fg "#333"
+
+set completion-group-bg "#fff"
+set completion-group-fg "#333"
+
+set completion-highlight-bg "#fff"
+set completion-highlight-fg "#c96d66"
+
+map r recolor
+
+unmap d

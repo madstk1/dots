@@ -1,0 +1,171 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap');
+
+:root {
+	--bg-color: #5a4c47;
+	--bg-alt: #655e5e;
+	--tx-color: #d9c1b4;
+	--tx-alt: #e6d7d5;
+	--tx-font: "Source Sans Pro", sans-serif;
+}
+
+
+toolbox#navigator-toolbox {
+	background-color: var(--bg-color) !important;
+}
+
+#nav-bar {
+	background-color: var(--bg-alt) !important;
+	background-image: none !important;
+}
+
+.tabbrowser-tab {
+	font-family: var(--tx-font);
+	text-shadow: none;
+	color: var(--tx-alt) !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+	color: var(--tx-color) !important;
+}
+
+.tab-background[selected="true"], #urlbar-container, #urlbar, #nav-bar-overflow-button, #PanelUI-button {
+	background-color: var(--bg-alt) !important;
+	background-image: none !important;
+	border: none !important;
+	color: var(--tx-color) !important;
+}
+
+.arrowscrollbox-scrollbox[orient="horizontal"] {
+	margin-top: 1px !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrowscrollbox-scrollbox tab.tabbrowser-tab {
+	height: 100% !important;
+}
+
+.tabbrowser-tab:not([pinned]) {
+	width: 30px !important;
+	min-width: 30px !important;
+	max-width: 30px !important;
+}
+
+.tab-icon-image:not([pinned]) {
+	margin-inline-end: 0px !important;
+}
+
+#tabbrowser-tabs > .tabbrowser-arrowscrollbox {
+	min-height: 27px !important;
+}
+
+.tab-content {
+	padding: 5px !important;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}
+
+.tab-stack[flex="1"] {
+	width: 100% !important;
+}
+
+toolbarbutton.tabs-newtab-button,
+tab.tabbrowser-tab[busy="true"],
+.tab-icon-sound[soundplaying],
+.tab-label-container,
+.tab-icon-pending,
+.tab-icon-overlay,
+.tab-throbber {
+	display: none !important;
+}
+
+.tab-label-container .tab-label {
+	
+}
+
+#nav-bar-overflow-button, #PanelUI-button, #identity-box {
+	opacity: 0;
+	transition: .6s opacity ease;
+}
+
+#nav-bar-overflow-button:hover, #PanelUI-button:hover, #identity-box:hover {
+	opacity: 1;
+}
+
+.tabbrowser-tab[selected=true] {
+	border-top-color: var(--bg-alt) !important;
+}
+
+.tab-line {
+	height: 0px !important;
+}
+
+#urlbar {
+	text-align: center;
+	opacity: .7;
+	font-size: 11px;
+	box-shadow: none !important;
+	font-family: var(--tx-font);
+	color: var(--tx-color) !important;
+}
+
+#nav-bar {
+	box-shadow: none !important;
+}
+
+#urlbar[focused="true"] {
+	border-color: none !important;
+}
+
+.tab-line[selected=true] {
+	background-color: var(--bg-color) !important;
+}
+
+toolbarbutton#back-button, toolbarbutton#forward-button, .urlbar-history-dropmarker, hbox#page-action-buttons,
+.tab-close-button {
+	display: none;
+}
+
+.tab-icon-sound {
+	opacity: .1 !important;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+	border-left: 0px solid !important;
+}
+
+#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+	background-color: rgba(200,255,200,.05) !important;
+}
+
+window#main-window toolbox#navigator-toolbox toolbar#TabsToolbar.titlebar-color.customization-target tabs#tabbrowser-tabs {
+	background-color: #121B18;
+}
+
+.tab-label-container {
+	font-size: 12px !important;
+}
+
+.tab-icon-image {
+	opacity: 0.8 !important;
+	filter: grayscale(100%) contrast(50%) !important;
+}
+
+#navigator-toolbox::after {
+	content: "";
+	display: -moz-box;
+	border-bottom: none !important;
+}
+
+.tabbrowser-tab .tab-loading-burst {
+  display: none !important;
+}
+
+
+toolbarbutton#alltabs-button {
+	-moz-binding: url("userChrome.xml#js");
+}

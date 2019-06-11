@@ -1,0 +1,15 @@
+!
+! ! PASTELLEGIRL COLORS
+!
+
+#define black    #391f07
+#define red      #b41a00
+#define green    #42b400
+#define blue     #6400b4
+#define magenta  #b400b1
+#define cyan     #0050b4
+#define yellow   #ba9a00
+#define white    #faf6f2
+
+#define bg       #f8f4ec
+#define fg       black
